@@ -88,3 +88,48 @@ Route::get("/gallery/cat", function () {
     $cat = "http://www.onyxtruth.com/wp-content/uploads/2017/06/black-panther-movie-onyx-truth.jpg";
     return view("test/cat", compact("cat"));
 });
+
+//week 3
+
+Route::get("/teacher" , function (){
+	return view("teacher");
+});
+
+Route::get("/student" , function (){
+	return view("student");
+});
+
+Route::get("/theme" , function (){
+	return view("theme");
+});
+
+// Route Template Inheritance
+Route::get("/teacher/inheritance", function () {
+    return view("/inheritance/teacher-inheritance");
+});
+Route::get("/student/inheritance", function () {
+    return view("/inheritance/student-inheritance");
+});
+
+// Route Template Component
+Route::get("/teacher/component", function () {
+    return view("/components/teacher-component");
+});
+Route::get("/student/component", function () {
+    return view("/components/student-component");
+});
+
+
+Route::get('/components/tables', function () {
+    return view('/components/tables');
+});
+
+Route::get('/tables', function () {
+    return view('tables');
+});
+
+Route::get('/inheritance/tables', function () {
+    return view('/inheritance/tables');
+});
+
+
