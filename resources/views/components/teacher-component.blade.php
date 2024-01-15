@@ -7,7 +7,9 @@
                         <th>อีเมล์</th>
                     </tr>
                 </thead>
+                
                 <tbody>
+                    
                     @php
                         $teachers = json_decode(file_get_contents('https://raw.githubusercontent.com/arc6828/laravel8/main/public/json/teachers.json'));
                     @endphp

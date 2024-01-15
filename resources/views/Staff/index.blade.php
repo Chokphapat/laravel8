@@ -29,7 +29,7 @@
         <tr>
             <th>#</th>
             <th>photo</th>
-            <th>title</th>
+            <th>Name</th>
             <th>birthdate</th>
             <th>salary</th>
             <th>phone</th>

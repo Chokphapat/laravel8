@@ -190,36 +190,3 @@ Route::delete("/product/{id}", [ProductController::class, "destroy"])->name('pro
 // Route::resource('/product', ProductController::class );
 
 Route::resource('/staff', StaffController::class);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
-
-
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth'])->name('dashboard');
-    
-    require __DIR__ . '/auth.php';
-    Route::middleware(['auth'])->group(function () {
-        Route::middleware(['role:admin'])->group(function () {
-        Route::get('/teacher', function () {
-            return view('teacher/index');
-        });
-        
-        Route::resource('/covid19','Covid19Controller');
-        });
-        });
-        Route::middleware(['auth', 'role:admin,teacher,student'])->group(function () {
-            Route::get('/teacher', function () {
-                return view('teacher/index');
-            });
-            
-            Route::resource('/covid19', 'Covid19Controller');
-            });
-
-           
-                                      
-        
