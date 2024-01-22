@@ -223,3 +223,4 @@ require __DIR__ . '/auth.php';
            
                                       
         
+Route::resource('post', 'PostController');
