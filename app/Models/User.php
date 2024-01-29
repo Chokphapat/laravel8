@@ -49,5 +49,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    
     ];
+    public function quotations()
+    {
+        return $this->hasMany(Quotation::class, 'quotation_id');
+    }
+
 }
